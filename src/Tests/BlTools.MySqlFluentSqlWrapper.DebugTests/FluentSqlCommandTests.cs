@@ -14,9 +14,9 @@ namespace BlTools.MySqlFluentSqlWrapper.DebugTests
         {
             var products = new FluentSqlCommand(ConnectionString)
                 .Procedure("procedureName")
-                .AddParameter("param1", "value1")
-                .AddParameter("param2", "value2")
-                .ExecuteReadRecordsList(ReadData);
+                .AddParam("param1", "value1")
+                .AddParam("param2", "value2")
+                .ExecReadList(ReadData);
             Assert.IsNotEmpty(products);
             var firstProduct = products.First();
             Assert.IsNotNull(firstProduct.ValueFromDb);
