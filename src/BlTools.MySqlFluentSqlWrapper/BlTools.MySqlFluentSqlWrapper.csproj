@@ -3,11 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Description>Provides fluent style wrapper around npgsql package for executing postgre sql commands</Description>
+    <Description>Provides fluent style wrapper around MySqlConnector package for executing sql commands</Description>
     <Authors>BlTools</Authors>
     <Company>bl-tools</Company>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/bl-tools/mysql-fluent-sql-wrapper</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
