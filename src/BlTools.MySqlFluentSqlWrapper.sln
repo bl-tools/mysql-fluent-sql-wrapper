@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlTools.MySqlFluentSqlWrapper", "BlTools.MySqlFluentSqlWrapper\BlTools.MySqlFluentSqlWrapper.csproj", "{2E213913-DCE0-4E45-98A3-CC723AA79090}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8462FC79-B439-45FC-90FB-5AAF8BE25819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlTools.MySqlFluentSqlWrapper.DebugTests", "Tests\BlTools.MySqlFluentSqlWrapper.DebugTests\BlTools.MySqlFluentSqlWrapper.DebugTests.csproj", "{A4E68035-F552-45CC-BCAB-197D8808EF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E213913-DCE0-4E45-98A3-CC723AA79090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E213913-DCE0-4E45-98A3-CC723AA79090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E213913-DCE0-4E45-98A3-CC723AA79090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E213913-DCE0-4E45-98A3-CC723AA79090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E68035-F552-45CC-BCAB-197D8808EF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E68035-F552-45CC-BCAB-197D8808EF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E68035-F552-45CC-BCAB-197D8808EF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E68035-F552-45CC-BCAB-197D8808EF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4E68035-F552-45CC-BCAB-197D8808EF6F} = {8462FC79-B439-45FC-90FB-5AAF8BE25819}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E92CD04-A727-41A1-9A36-6708A58BB3A0}
+	EndGlobalSection
+EndGlobal
