@@ -5,7 +5,7 @@ using MySqlConnector;
 
 namespace BlTools.MySqlFluentSqlWrapper
 {
-    public sealed class FluentSqlCommand
+    public sealed class FluentSqlCommand : IFluentCommand
     {
         private readonly MySqlCommand _command;
         private readonly MySqlParameterCollection _parameters;
@@ -20,27 +20,27 @@ namespace BlTools.MySqlFluentSqlWrapper
             _needPreparation = true;
         }
 
-        public FluentSqlCommand Procedure(string procedureName)
+        public IFluentCommand Procedure(string procedureName)
         {
             _command.CommandText = procedureName;
             _command.CommandType = CommandType.StoredProcedure;
             return this;
         }
 
-        public FluentSqlCommand Query(string queryText)
+        public IFluentCommand Query(string queryText)
         {
             _command.CommandText = queryText;
             _command.CommandType = CommandType.Text;
             return this;
         }
 
-        public FluentSqlCommand WithTimeout(int timeoutInSeconds)
+        public IFluentCommand WithTimeout(int timeoutInSeconds)
         {
             _command.CommandTimeout = timeoutInSeconds;
             return this;
         }
 
-        public FluentSqlCommand WithoutPreparation()
+        public IFluentCommand WithoutPreparation()
         {
             _needPreparation = false;
             return this;
@@ -48,43 +48,43 @@ namespace BlTools.MySqlFluentSqlWrapper
 
         #region add param
 
-        public FluentSqlCommand AddParam(string name, object value)
+        public IFluentCommand AddParam(string name, object value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, string value)
+        public IFluentCommand AddParam(string name, string value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, int? value)
+        public IFluentCommand AddParam(string name, int? value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, float? value)
+        public IFluentCommand AddParam(string name, float? value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, long? value)
+        public IFluentCommand AddParam(string name, long? value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, DateTime? value)
+        public IFluentCommand AddParam(string name, DateTime? value)
         {
             _parameters.AddWithValue(name, value);
             return this;
         }
 
-        public FluentSqlCommand AddParam(string name, bool? value)
+        public IFluentCommand AddParam(string name, bool? value)
         {
             _parameters.AddWithValue(name, value);
             return this;
