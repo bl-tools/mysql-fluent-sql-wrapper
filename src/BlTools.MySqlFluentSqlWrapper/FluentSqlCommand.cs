@@ -5,7 +5,7 @@ using MySqlConnector;
 
 namespace BlTools.MySqlFluentSqlWrapper
 {
-    public sealed class FluentSqlCommand
+    public sealed class FluentSqlCommand : IFluentCommand
     {
         private readonly MySqlCommand _command;
         private readonly MySqlParameterCollection _parameters;
@@ -135,28 +135,28 @@ namespace BlTools.MySqlFluentSqlWrapper
                     switch (execType)
                     {
                         case ExecType.Reader:
-                        {
-                            var reader = _command.ExecuteReader();
-                            using (reader)
                             {
-                                while (reader.Read())
+                                var reader = _command.ExecuteReader();
+                                using (reader)
                                 {
-                                    _dataReaderAction?.Invoke(reader);
+                                    while (reader.Read())
+                                    {
+                                        _dataReaderAction?.Invoke(reader);
+                                    }
                                 }
-                            }
 
-                            break;
-                        }
+                                break;
+                            }
                         case ExecType.NonQuery:
-                        {
-                            _command.ExecuteNonQuery();
-                            break;
-                        }
+                            {
+                                _command.ExecuteNonQuery();
+                                break;
+                            }
                         case ExecType.Scalar:
-                        {
-                            result = _command.ExecuteScalar();
-                            break;
-                        }
+                            {
+                                result = _command.ExecuteScalar();
+                                break;
+                            }
                     }
                 }
             }
