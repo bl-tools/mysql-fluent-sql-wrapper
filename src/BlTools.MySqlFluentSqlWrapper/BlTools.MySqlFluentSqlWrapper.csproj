@@ -9,6 +9,8 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/bl-tools/mysql-fluent-sql-wrapper</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
+    <PackageReleaseNotes>Extracted "IFluentCommand" interface for the ability to mock "fluentCommand" class in testing</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
